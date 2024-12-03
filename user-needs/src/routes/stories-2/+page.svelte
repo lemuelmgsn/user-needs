@@ -1,3 +1,9 @@
+,<script>
+
+import Story from '../../components/layout/story.svelte';
+
+</script>
+
 <!-- <header>
 
     <div class="heading">
@@ -29,31 +35,99 @@
 <main>
     <section>
         <ul id="cards">
-        <li class="card" style="--index: 1;">
-            <div class="card__content">Card 1</div>
-        </li>
-        <li class="card" style="--index: 2;">
-            <div class="card__content">Card 2</div>
-        </li>
-        <li class="card" style="--index: 3;">
-            <div class="card__content">Card 3</div>
-        </li>
-        <li class="card" style="--index: 4;">
-            <div class="card__content">Card 4</div>
-        </li>
-        <li class="card" style="--index: 5;">
-            <div class="card__content">Card 5</div>
-        </li>
-        <li class="card" style="--index: 6;">
-            <div class="card__content">Card 6</div>
-        </li>
+
+
+            <li class="card" style="--index: 1;">
+                <Story/>
+            </li>
+            
+            <li class="card" style="--index: 2;">
+                <Story/>
+            </li>
+
+            <li class="card" style="--index: 3;">
+                <Story/>
+            </li>
+
+            <li class="card" style="--index: 4;">
+                <Story/>
+            </li>
+            
         </ul>
     </section>
 </main>
   
   
 <style>
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Verwijdert horizontale scrollbars */
+}
+
+
+
+    .story-title {
+      font-size: 10px;
+      font-weight: 600;
+      grid-area: 1 / 3 / 2 / 6;
+    }
+
+    p {
+      font-size: 8px;
+    }
+
+    img {
+      max-width: 1.1em;
+    }
+
+    .story-image {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+
+    .story-image img{
+      max-width: 3.75em;
+      min-height: 4em;
+      object-fit: cover;
+    }
+
+    .story-language {
+      grid-area: 1 / 6 / 2 / 7;
+      justify-content: flex-end;
+    }
     
+    .story-summary {
+      grid-area: 2 / 3 / 3 / 7;
+      width: 275px;
+      max-height: 1.5em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      overflow: hidden;
+    }
+
+    .story-playtime {
+      grid-area: 3 / 3 / 4 / 6; 
+    }
+
+    .story-playtime a {
+      display: flex;
+      align-items: center;
+    }
+
+    .story-icons {
+      grid-area: 3 / 6 / 4 / 7; 
+      justify-content: flex-end;
+    }
+
+    .flex-items {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* tumi mudno styling boven */
 .heading{
     display: flex;
     justify-content: space-between;
@@ -127,6 +201,19 @@ section{
     outline: var(--outline-width) solid blue;
     opacity: .8;
 }
+
+/* .card__content {
+      width: 22.5em;
+      max-height: 5.3em;
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      grid-template-rows: repeat(3, 1fr);
+      background-color: #fff;
+      overflow: hidden;
+      padding: 10px;
+      border-radius: 4px;
+      color: black;
+    } */
 
 .card:nth-child(1) .card__content {
     background: #5A5BE5;
@@ -215,5 +302,82 @@ section{
 	animation-timeline: --cards-element-scrolls-in-body;
 	animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
 }
+
+/* tm */
+
+.card__content {
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    color: rgb(10, 5, 7);
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Raster met 6 kolommen */
+    grid-template-rows: repeat(3, auto); /* Dynamische rijen */
+    gap: 10px;
+    padding: 10px;
+    align-items: start;
+    height: var(--card-height);
+    position: relative;
+    transform-origin: 50% 0%;
+    will-change: transform;
+}
+
+/* Story specifieke elementen binnen .card__content */
+.story-image {
+    grid-area: 1 / 1 / 4 / 2;
+}
+.story-image img {
+    max-width: 3.75em;
+    min-height: 4em;
+    object-fit: cover;
+}
+
+.story-title {
+    font-size: 10px;
+    font-weight: 600;
+    grid-area: 1 / 3 / 2 / 6;
+}
+
+.story-language {
+    grid-area: 1 / 6 / 2 / 7;
+    justify-content: flex-end;
+}
+
+.story-summary {
+    grid-area: 2 / 3 / 3 / 7;
+    width: 275px;
+    max-height: 1.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.story-playtime {
+    grid-area: 3 / 3 / 4 / 6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.story-icons {
+    grid-area: 3 / 6 / 4 / 7;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.story-title,
+.story-summary,
+.story-icons {
+    max-width: 100%;
+    overflow: hidden; /* Voorkom dat tekst of iconen uitrekken */
+    text-overflow: ellipsis; /* Voeg een ... toe aan lange tekst */
+    white-space: nowrap; /* Optioneel: voorkom regelafbreking */
+}
+
+
 
 </style>
