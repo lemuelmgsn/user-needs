@@ -71,28 +71,31 @@ ul:nth-of-type(1) > li{
     --card-height: 40vw;
     --card-margin: 4vw;
     --card-top-offset: 1em;
+    background-image: linear-gradient(#471871, #142151);
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
-    position: relative;
-    z-index: 10; /* Zorg ervoor dat de header boven andere elementen staat */
+    position: fixed;
+    z-index: 10;
+    width: 100%; /* Zorg ervoor dat de header de volledige breedte beslaat */
+    height: 10vh; /* Stel een consistente hoogte in */
+    background-color: white; 
 }
 
+
 main{
-    /* background-color: purple; */
-    /* pas aan per scherm grootte */
-    /* height: 300vh; */
     height: auto;
+    transform: translateY(15vh);
 }
 
 section{
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
-    /* height: 200vh; */
 
 }
 
@@ -121,11 +124,11 @@ section{
     grid-template-rows: auto;
     align-items: stretch;
     outline: var(--outline-width) solid blue;
-    opacity: .7;
+    opacity: .8;
 }
 
 .card:nth-child(1) .card__content {
-    background: blue;
+    background: #5A5BE5;
 }
 
 .card:nth-child(2) .card__content {
@@ -133,7 +136,7 @@ section{
 }
 
 .card:nth-child(3) .card__content {
-    background: yellow;
+    background: #fdd81f;
 }
 
 .card:nth-child(4) .card__content {
