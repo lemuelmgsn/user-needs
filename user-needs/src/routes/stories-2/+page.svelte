@@ -34,26 +34,7 @@ import Story from '../../components/layout/story.svelte';
 
 <main>
     <section>
-        <ul id="cards">
-
-
-            <li class="card" style="--index: 1;">
-                <Story/>
-            </li>
-            
-            <li class="card" style="--index: 2;">
-                <Story/>
-            </li>
-
-            <li class="card" style="--index: 3;">
-                <Story/>
-            </li>
-
-            <li class="card" style="--index: 4;">
-                <Story/>
-            </li>
-            
-        </ul>
+        <Story/>
     </section>
 </main>
   
@@ -63,6 +44,22 @@ import Story from '../../components/layout/story.svelte';
 html, body {
     max-width: 100%;
     overflow-x: hidden; /* Verwijdert horizontale scrollbars */
+}
+
+.story-1 {
+    background-color: #5A5BE5;
+}
+
+.story-2 {
+    background-color: pink;
+}
+
+.story-3 {
+    background-color: #fdd81f;
+}
+
+.story-4 {
+    background-color: lightgreen;
 }
 
 
@@ -143,9 +140,9 @@ ul:nth-of-type(1) > li{
 
 /* test issue */
 :root{
-    --card-height: 40vw;
+    /* --card-height: 40vw; */
     --card-margin: 4vw;
-    --card-top-offset: 1em;
+    --card-top-offset: .4em;
     background-image: linear-gradient(#471871, #142151);
 }
 *{
@@ -164,8 +161,20 @@ header {
 
 
 main{
-    height: auto;
+    /* height: auto; */
+    height: 198vh;
     transform: translateY(15vh);
+}
+
+@media only screen and (min-width: 500px) {
+  main {
+    height: 190vh;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  main {
+    height: 187vh;
+  }
 }
 
 section{
@@ -274,7 +283,7 @@ section{
 
 @supports (animation-timeline: view()){
     #cards {
-	--numcards: 6;
+	--numcards: 8;
 	view-timeline-name: --cards-element-scrolls-in-body;
  }
 }
