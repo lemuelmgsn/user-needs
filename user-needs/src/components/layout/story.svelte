@@ -6,11 +6,11 @@
     { id: 1, title: "It was 8 o'clock", language: "/languages/Dutch.svg", summary: "Story about .... more information soon.", playtime: "3 min 26 sec" },
     { id: 2, title: "Another Story", language: "/languages/English.svg", summary: "A short story summary.", playtime: "5 min 10 sec" },
     { id: 3, title: "Mystery Tale", language: "/languages/French.svg", summary: "Exciting and mysterious story.", playtime: "7 min 50 sec" },
-    { id: 4, title: "Adventure Time", language: "/languages/Spanish.svg", summary: "An adventurous journey.", playtime: "4 min 30 sec" },
+    { id: 4, title: "Adventure Time", language: "/languages/Japanese.svg", summary: "An adventurous journey.", playtime: "4 min 30 sec" },
     { id: 5, title: "It was 8 o'clock", language: "/languages/Dutch.svg", summary: "Story about .... more information soon.", playtime: "3 min 26 sec" },
     { id: 6, title: "Another Story", language: "/languages/English.svg", summary: "A short story summary.", playtime: "5 min 10 sec" },
     { id: 7, title: "Mystery Tale", language: "/languages/French.svg", summary: "Exciting and mysterious story.", playtime: "7 min 50 sec" },
-    { id: 8, title: "Adventure Time", language: "/languages/Spanish.svg", summary: "An adventurous journey.", playtime: "4 min 30 sec" },
+    { id: 8, title: "Adventure Time", language: "/languages/Japanese.svg", summary: "An adventurous journey.", playtime: "4 min 30 sec" },
   ];
 
   // Kleurenarray
@@ -103,6 +103,7 @@ section {
     position: sticky;
     top: 0;
     padding-top: calc(var(--index) * var(--card-top-offset));
+    /* padding-top: .5rem; */
     height: var(--card-height);
     will-change: transform;
 }
