@@ -8,8 +8,6 @@
     </section>
   </main>
   
-  <!-- <img src="/nyan-cat.svg" class="unicorn-3" alt="unicorn">
-  <img src="/nyan-cat2.svg" class="unicorn-4" alt="unicorn"> -->
 
     <img src="/nyan-cat-tilted2.svg" class="unicorn-5" alt="unicorn">
 
