@@ -8,12 +8,12 @@
     </section>
   </main>
   
-  <!-- <img src="/nyan-cat.svg" class="unicorn" alt="unicorn">
-  <img src="/nyan-cat2.svg" class="unicorn-2" alt="unicorn">
-  <img src="/nyan-cat.svg" class="unicorn-3" alt="unicorn">
+  <!-- <img src="/nyan-cat.svg" class="unicorn-3" alt="unicorn">
   <img src="/nyan-cat2.svg" class="unicorn-4" alt="unicorn"> -->
 
-    <img src="/nyan-cat.svg" class="unicorn-5" alt="unicorn">
+    <img src="/nyan-cat-tilted2.svg" class="unicorn-5" alt="unicorn">
+
+    <img src="/nyan-cat-tilted.svg" class="unicorn-6" alt="unicorn">
   
   
 
@@ -94,8 +94,8 @@
 /* test scroll */
 
 .unicorn-5{
-    height: 6rem;
-    width: 6rem;
+    height: 20rem;
+    width: 30rem;
     position: fixed;
     top: 50%;
     animation: yayy2 infinite;
@@ -107,19 +107,42 @@
   animation-timeline: scroll();
 }
 
+.unicorn-6{
+    height: 20rem;
+    width: 30rem;
+    position: fixed;
+    top: 10%;
+    animation: yayy2 infinite;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    transform: rotateX(45deg);
+}
+.unicorn-6 {
+  animation: scrollOut2 linear forwards;
+  animation-timeline: scroll();
+}
+
 @keyframes scrollOut {
   from {
-    transform: translateX(-100vw);
+    transform: translateX(-200vw) translateY(50%);
   }
   to {
-    transform: translateX(100vw);
+    transform: translateX(100vw) translateY(-40%);
+  }
+}
+@keyframes scrollOut2 {
+  from {
+    transform: translateX(100vw) translateY(70%);
+  }
+  to {
+    transform: translateX(-130vw) translateY(-50%);
   }
 }
 
   
   /* Main layout */
   main {
-    height: 190vh;
+    height: 200vh;
     transform: translateY(15vh);
   }
   

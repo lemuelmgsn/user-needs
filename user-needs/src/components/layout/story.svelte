@@ -25,7 +25,7 @@
         style="background-color: {colors[index % colors.length]};"
       >
         <div class="story-image flex-items">
-          <img src="/temp/profile-test.png" alt="Story image" />
+          <img src="/stories/{story.id}.svg" alt="Story image" />
         </div>
         <h3 class="story-title">{story.title}</h3>
         <div class="story-language flex-items">
